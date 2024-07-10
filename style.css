@@ -1,0 +1,146 @@
+:root {
+    --shake-effect: 5px;
+}
+@keyframes shake {
+    from { transform: translate(0, 0); }
+    25% { transform: translate(var(--shake-effect), 0); }
+    50% { transform: translate(0, 0); }
+    75% { transform: translate(-var(--shake-effect), 0); }
+    to { transform: translate(0, 0); }
+}
+.shake-screen {
+    position: relative;
+    animation: shake 0.25s ease-in-out 1 alternate-reverse;
+}
+.show-mole-hard {
+    background: url("pictures/mole2.gif");
+    background-size: cover;
+}
+.show-mole-easy {
+    background: url("pictures/mole.gif");
+    background-size: cover;
+}
+.hide {
+    display: none !important;
+}
+.show{display: block !important;}
+.reveal {
+    display: block;
+}
+#cog:hover{
+    background-color: gold;
+}
+#cog{
+    background-image: url("pictures/cog.png");
+    width: fit-content;
+}
+#menu{
+    color: blue;
+    display: none;
+}
+#play {
+    background: url("pictures/mole.gif");
+    background-size: cover;
+    left: 47.5%;
+    position: relative;
+    color: white;
+}
+#easy, #hard, #play {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: fit-content;
+    height: fit-content;
+    border: solid black 1px;
+    padding: 10px;
+}
+#easy:hover, #hard:hover, #play:hover {
+    opacity: .50;
+}
+#easy, #hard {
+    display: none;
+}
+#score {
+    width: 50px;
+    margin: 30px;
+    font-size: larger;
+}
+#score {
+    display: flex;
+    margin: 20px;
+    width: fit-content;
+    float: right;
+    position: relative;
+}
+#easy {
+    background-color: greenyellow;
+}
+#hard {
+    background-color: red;
+}
+.container {
+    background-color: #d9d9d9;
+    height: fit-content;
+}
+.blocks {
+    height: 120px;
+    width: 120px;
+    border: 5px black solid;
+    margin: 10px;
+    border-radius: 100%;
+    background-color: black;
+}
+.hammer {
+    background: url("pictures/hammer.gif");
+    background-size: cover;
+}
+.container-blocks1, .container-blocks2, .container-blocks3, .container-blocks4, .container-blocks5 {
+    display: flex;
+    text-align: center;
+    width: fit-content;
+    width: -moz-fit-content; /* For Firefox support */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+}
+.blocks:hover {
+    border-color: rgb(71, 9, 243);
+}
+.blocks:active {
+    border-color: lightcoral;
+    transform: scale(0.95);
+}
+.twenty4{
+    background: url("./Pictures/wed.gif");
+}
+@media only screen and (min-width: 600px) {
+    .blocks, img, #cog {
+        height: 60px;
+        width: 60px;
+    }
+}
+/* Media Queries for responsiveness */
+@media (max-width: 600px) {
+    .blocks, #cog {
+        height: 30px;
+        width: 30px;
+}
+
+    .container {
+        padding: 10px;
+}
+    #score{
+        margin-top: 100px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .blocks {
+        height: 150px;
+        width: 150px;
+    }
+    #play, #easy, #hard{
+        scale: 2;
+        margin-top: 50px;
+    }
+}
