@@ -1,3 +1,11 @@
+@keyframes spin {
+  0% {
+      transform: rotate(180deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -10,7 +18,9 @@ header {
   padding: 1rem;
   text-align: center;
 }
-
+#projects{
+  position: relative;
+}
 
 nav img{
     right: -20px;
@@ -18,6 +28,10 @@ nav img{
     width: 200px;
     height: 200px;
     border-radius: 100%;
+}
+nav img:hover{
+  border: 3px black solid;
+  /*animation: spin 1s ease-in infinite alternate-reverse; */
 }
 nav ul {
   list-style: none;
@@ -34,25 +48,44 @@ nav ul li a {
   text-decoration: none;
 }
 section ul{
-  list-style-type:square;
+  list-style-type:none;
+  
+}
+section ul li{
+  display: flex;
 }
 section ul li img {
   position: relative;
-  width: 100px;
+  margin: 10px;
+  padding: 0;
+  display: block; /* Ensures no inline spacing */
   height: 100px;
-  margin-left: 200px;
-  top: 50px;
+  width: 100px;
+  left:200px;
+
+}
+
+section ul li img ::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* Adjust to control border length */
+  height: 5px; /* Border thickness */
+  background: black; /* Border color */
 }
 section ul li img:hover{
-  border: solid gold 2px;
+  
+  box-shadow: #666 1px 1px;
+  transition: ease-in .25s;
+  
 }
 section ul li a{
   font-size: x-large;
   text-decoration: none;
 }
 section ul li a:hover {
-  font-size: xx-large;
-  text-decoration: line-through;
+  color: gold;
 }
 
 section {
@@ -112,6 +145,9 @@ footer {
   /* Emphasis on Key Points */
   #about p strong {
     color: #ff6347;
+  }
+  #weather-image{
+    left:1100px;
   }
   
   /* Responsive Design */
