@@ -21,7 +21,9 @@ header {
 #projects{
   position: relative;
 }
-
+nav a:hover{
+  color: gold;
+}
 nav img{
     right: -20px;
     position: fixed;
@@ -76,20 +78,20 @@ section ul li img ::before {
 }
 section ul li img:hover{
   
-  box-shadow: #666 1px 1px;
-  transition: ease-in .25s;
-  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease-in-out;
 }
 section ul li a{
   font-size: x-large;
   text-decoration: none;
 }
-section ul li a:hover {
-  color: gold;
+section ul li a h3:hover {
+  color: rgb(211, 191, .5)
+ 
 }
 
 section {
-  padding: 2rem;
+  padding: 4rem 2rem;
   margin: 2rem 0;
 }
 
@@ -97,9 +99,25 @@ footer {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 0;
+  font-size: 0.9rem;
 }
+footer p {
+  margin: 0;
+}
+
 /* General Section Styling */
+strong{
+  font-size: larger;
+}
+#skills{
+  align-items: center;
+  justify-items: center;
+}
+#skills li, ul{
+  margin-top: 50px;
+  margin: 10px;
+}
 #about {
     background-color: #f9f9f9;
     padding: 4rem 2rem;
@@ -152,12 +170,56 @@ footer {
   
   /* Responsive Design */
   @media (max-width: 768px) {
-    #about h2 {
-      font-size: 2rem;
+    section ul li {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
   
-    #about p {
-      font-size: 1rem;
+    section ul li img {
+      margin: 0 0 10px 0;
+    }
+  
+    section ul li a {
+      font-size: 1.2rem;
     }
   }
-  
+  nav ul li a:focus {
+    outline: 2px dashed gold;
+    outline-offset: 2px;
+  }
+
+  /* General Styling */
+button#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+button#theme-toggle:hover {
+  opacity: 0.8;
+}
+
+svg {
+  transition: all 0.3s ease;
+  width: 24px;
+  height: 24px;
+}
+
+/* Dark Mode */
+.dark-mode{
+  background-color: #333;
+  color: #fff;
+}
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode button#theme-toggle svg {
+  stroke: #ffd700; /* Yellow for sun in dark mode */
+}
+
+

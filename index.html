@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="./styles.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
@@ -16,9 +17,28 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li>
+          <!-- Toggle Button -->
+          <button id="theme-toggle" aria-label="Toggle dark/light mode">
+            <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Default to light mode (Sun Icon) -->
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+        </li>
       </ul>
     </nav>
+
   </header>
+
   <section id="about">
     <a name="about" ><h2>About Me</h2></a>
     <p>"I am a self-taught Front-End Developer with several years of hands-on experience. I specialize in crafting visually appealing and user-friendly interfaces while seamlessly integrating backend processes to deliver complete, functional solutions. My daily work involves combining creativity and technical expertise to create applications that prioritize both aesthetics and performance."
@@ -49,20 +69,26 @@
              </li>
              <li>
               <a href="./Weather/index.html" target="_blank">
-                 <h3>WacAmole</h3>
+                <h3>Weather App</h3>
               </a>
-              <img id="weather-image" src="./images/weather.png" alt="Screenshot of lightning">
-              <p>A Real time Weather App.</p>
-           </li>
+              <img id="weather-image" src="./images/weather.png" alt="Screenshot of Weather App">
+              <p>A real-time weather app using OpenWeather API to display current conditions and forecasts.</p>
+            </li>
           </ul>
        </section>
        
 
-  <section id="skills"> 
-    <a name="skills"><h2>Skills</h2></a>
-    <!-- Skills list -->
-     <p>Photoshop, Illustrator, Canva, Figma</p>
-  </section>
+  <section id="skills">
+    <a name="skills"></a>
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Front-End Development:</strong><p>HTML5, CSS3, JavaScript (ES6+), React, Vue.js</p> </li>
+      <li><strong>Back-End Development:</strong><p>Node.js, Express.js<li></li></p>  
+      <li><strong>Design Tools:</strong>  <p>Photoshop, Illustrator, Canva Figma</p> </li>
+      <li><strong>Version Control:</strong> <p>Git, GitHub</p> </li>
+      </ul>
+    </section>
+      
   <section id="media">
     <h2>Media</h2>
     <p>Check out my YouTube channel where I share tutorials and insights on front-end development.</p>
