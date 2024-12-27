@@ -6,10 +6,10 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="./styles.css">
   <script defer src="script.js"></script>
+ 
 </head>
 <body>
   <header>
-    <h1>Ambatobe, Malango</h1>
     <nav>
         <img src="./Images/head.jpg" alt="">
       <ul>
@@ -36,67 +36,71 @@
         </li>
       </ul>
     </nav>
-
+    <h1>Ambatobe, Malango</h1>
+    <p>Crafting beautiful and functional web experiences.</p>
+    <a href="#contact" class="cta-button">Get in Touch</a>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#ffffff" fill-opacity="1" d="M0,224L120,192C240,160,480,96,720,117.3C960,139,1200,245,1320,293.3L1440,320L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
+    </svg>
   </header>
 
   <section id="about">
-    <a name="about" ><h2>About Me</h2></a>
-    <p>"I am a self-taught Front-End Developer with several years of hands-on experience. I specialize in crafting visually appealing and user-friendly interfaces while seamlessly integrating backend processes to deliver complete, functional solutions. My daily work involves combining creativity and technical expertise to create applications that prioritize both aesthetics and performance."
-        
-        <section id="projects">
-          <h2>Projects</h2>
-          <ul>
-             <li>
-                <a href="./LeadGenApp/index.html" target="_blank">
-                   <h3>Lead Generation App</h3>
-                </a>
-                <img id="leadgen-image" src="./images/leadgen.png" alt="Screenshot of Lead Generation App">
-                <p>A web app for tracking and converting leads, built with React, Node.js, and MongoDB.</p>
-             </li>
-             <li>
-                <a href="./FinanceApp/index.html" target="_blank">
-                   <h3>Finance App</h3>
-                </a>
-                <img id="finance-image" src="./images/finance.png" alt="Screenshot of Finance App">
-                <p>A budgeting tool to manage personal finances, developed using Python and Flask.</p>
-             </li>
-             <li>
-                <a href="./WacAmole/index.html" target="_blank">
-                   <h3>WacAmole</h3>
-                </a>
-                <img id="wacamole-image" src="./images/wacamole.png" alt="Screenshot of WacAmole Game">
-                <p>An interactive whack-a-mole game using HTML, CSS, and JavaScript.</p>
-             </li>
-             <li>
-              <a href="./Weather/index.html" target="_blank">
-                <h3>Weather App</h3>
-              </a>
-              <img id="weather-image" src="./images/lightning.jpg" alt="Screenshot of Weather App">
-              <p>A real-time weather app using OpenWeather API to display current conditions and forecasts.</p>
-            </li>
-          </ul>
-       </section>
-       
+    <h2>About Me</h2>
+    <p>
+      I am a self-taught Front-End Developer with several years of hands-on experience. I specialize in crafting visually appealing and user-friendly interfaces while seamlessly integrating backend processes to deliver complete, functional solutions.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>
+        <h3>Lead Generation App</h3>
+        <img src="./images/leadgen.png" alt="Lead Generation App">
+        <p>A web app for tracking and converting leads, built with React, Node.js, and MongoDB.</p>
+      </li>
+      <li>
+        <h3>Finance App</h3>
+        <img src="./images/finance.png" alt="Finance App">
+        <p>A budgeting tool to manage personal finances, developed using Python and Flask.</p>
+      </li>
+      <li>
+        <h3>WacAmole Game</h3>
+        <img src="./images/wacamole.png" alt="WacAmole Game">
+        <p>An interactive whack-a-mole game using HTML, CSS, and JavaScript to enhance reflexes and provide entertainment.</p>
+      </li>
+      <li>
+        <h3>Weather App</h3>
+        <img src="./images/weather.png" alt="Weather App">
+        <p>A real-time weather app that uses the OpenWeather API to display current conditions and forecasts.</p>
+      </li>
+    </ul>
+  </section>
+  
 
   <section id="skills">
-    <a name="skills"></a>
     <h2>Skills</h2>
     <ul>
-      <li><strong>Front-End Development:</strong><p>HTML5, CSS3, JavaScript (ES6+), React, Vue.js</p> </li>
-      <li><strong>Back-End Development:</strong><p>Node.js, Express.js<li></li></p>  
-      <li><strong>Design Tools:</strong>  <p>Photoshop, Illustrator, Canva Figma</p> </li>
-      <li><strong>Version Control:</strong> <p>Git, GitHub</p> </li>
-      </ul>
-    </section>
-      
-  <section id="media">
-    <h2>Media</h2>
-    <p>Check out my YouTube channel where I share tutorials and insights on front-end development.</p>
-    <a href="https://www.youtube.com/channel/UCGg1hXiatT4jr1Gu0EGi3Kg" target="_blank">Visit My Channel</a>
+        <li>
+            <img src="./Images/svg/figma.svg" alt="Figma" onerror="this.style.display='none'">
+            HTML5
+          </li>
+          <li>
+            <img src="./Images/svg/photoshop.svg" alt="Photoshop" onerror="this.style.display='none'">
+            CSS3
+          </li>
+          <li>
+            <img src="./Images/svg/react.svg" alt="React" onerror="this.style.display='none'">
+            JavaScript
+          </li>
+          <li>
+            <img src="./Images/svg/python.svg" alt="React" onerror="this.style.display='none'">
+            React
+          </li>
   </section>
 
   <section id="contact">
-     <a name="contact"><h2>Contact</h2></a>
+    <h2>Contact</h2>
     <p>Email: ambatobe@triplevmedia.com</p>
     <p>Phone: 210-859-2935</p>
   </section>
@@ -104,7 +108,5 @@
   <footer>
     <p>&copy; 2024 Malango. All rights reserved.</p>
   </footer>
-
 </body>
-
 </html>

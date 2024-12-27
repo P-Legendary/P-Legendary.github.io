@@ -2,38 +2,19 @@ const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
 const body = document.body;
 
-// Check and apply the initial theme from localStorage
-if (localStorage.getItem('theme') === 'dark') {
-  body.classList.add('dark-mode');
-  setIcon('dark');
-} else {
-  setIcon('light');
-}
-
-// Toggle theme on button click
+// Toggle dark mode
 themeToggle.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
 
-  const isDarkMode = body.classList.contains('dark-mode');
-  localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-  setIcon(isDarkMode ? 'dark' : 'light');
-});
-
-// Function to update the SVG icon
-function setIcon(mode) {
-  if (mode === 'dark') {
+  // Update icon colors based on the mode
+  if (body.classList.contains('dark-mode')) {
+    themeIcon.style.stroke = 'yellow'; // Turn lines yellow in dark mode
     themeIcon.innerHTML = `
+      <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
       <circle cx="12" cy="12" r="5"></circle>
-      <path d="M12 1v2"></path>
-      <path d="M12 21v2"></path>
-      <path d="M4.22 4.22l1.42 1.42"></path>
-      <path d="M18.36 18.36l1.42 1.42"></path>
-      <path d="M1 12h2"></path>
-      <path d="M21 12h2"></path>
-      <path d="M4.22 19.78l1.42-1.42"></path>
-      <path d="M18.36 5.64l1.42-1.42"></path>
     `;
   } else {
+    themeIcon.style.stroke = 'currentColor'; // Restore to default color
     themeIcon.innerHTML = `
       <circle cx="12" cy="12" r="5"></circle>
       <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -46,4 +27,4 @@ function setIcon(mode) {
       <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
     `;
   }
-}
+});

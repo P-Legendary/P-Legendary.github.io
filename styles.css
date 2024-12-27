@@ -1,225 +1,262 @@
-@keyframes spin {
-  0% {
-      transform: rotate(180deg);
-  }
-  100% {
-      transform: rotate(360deg);
-  }
-}
+/* General Styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-}
-#projects{
-  position: relative;
-}
-nav a:hover{
-  color: gold;
-}
-nav img{
-    right: -20px;
-    position: fixed;
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
-}
-nav img:hover{
-  border: 3px black solid;
-  /*animation: spin 1s ease-in infinite alternate-reverse; */
-}
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 1rem;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-section ul{
-  list-style-type:none;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(to bottom, #f5faff, #ffffff);
+    overflow-x: hidden;
+  }
   
-}
-section ul li{
-  display: flex;
-}
-section ul li img {
-  position: relative;
-  margin: 10px;
-  padding: 0;
-  display: block; /* Ensures no inline spacing */
-  height: 100px;
-  width: 100px;
-  left:200px;
-
-}
-
-section ul li img ::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%; /* Adjust to control border length */
-  height: 5px; /* Border thickness */
-  background: black; /* Border color */
-}
-section ul li img:hover{
+  h2 {
+    font-size: 2rem;
+    color: #4361ee;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
   
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: box-shadow 0.3s ease-in-out;
+  h2::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background: #4cc9f0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+  }
+  
+  /* Header Styles */
+  header {
+    text-align: center;
+    padding: 4rem 1.5rem;
+    background: linear-gradient(to right, #4361ee, #4cc9f0);
+    color: white;
+    position: relative;
+  }
+  button#theme-toggle {
+    background: none;
+    border: none;
 }
-section ul li a{
-  font-size: x-large;
-  text-decoration: none;
-}
-section ul li a h3:hover {
-  color: rgb(211, 191, .5)
- 
-}
-
-section {
-  padding: 4rem 2rem;
-  margin: 2rem 0;
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem 0;
-  font-size: 0.9rem;
-}
-footer p {
-  margin: 0;
-}
-
-/* General Section Styling */
-strong{
-  font-size: larger;
-}
-#skills{
-  align-items: center;
-  justify-items: center;
-}
-#skills li, ul{
-  margin-top: 50px;
-  margin: 10px;
-}
-#about {
-    background-color: #f9f9f9;
-    padding: 4rem 2rem;
+  
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: transparent;
+  }
+  
+  nav img {
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ffcc00;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  header .cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #ffcc00;
+    color: #333;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  header .cta-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* About Section */
+  #about {
+    padding: 3rem 1.5rem;
+    background: #f0f4f8;
     text-align: center;
   }
   
-  /* Title Styling */
-  #about h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 1.5rem;
-    position: relative;
-  }
-  
-  /* Underline Effect for Title */
-  #about h2::before {
-    content: '*';
-    width: 100px;
-    height: 4px;
-    background-color: #ff6347;
-    display: block;
-    margin: 0.5rem auto 0;
-  }
-  #about h2::after {
-    content: '';
-    width: 100px;
-    height: 4px;
-    background-color: #ff6347;
-    display: block;
-    margin: 0.5rem auto 0;
-  }
-  
-  /* Paragraph Styling */
   #about p {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    margin-bottom: 2rem;
   }
   
-  /* Emphasis on Key Points */
-  #about p strong {
-    color: #ff6347;
-  }
-  #weather-image{
-    left:1100px;
+  /* Projects Section */
+  #projects ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0;
+    list-style: none;
   }
   
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    section ul li {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+  #projects li {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #projects li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  #projects img {
+    width: 100%;
+    border-bottom: 2px solid #4cc9f0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  #projects h3 {
+    padding: 1rem;
+    text-align: center;
+    background: #4361ee;
+    color: white;
+    margin: 0;
+  }
+  
+  /* Skills Section */
+  #skills {
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+  
+  #skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  #skills li {
+    background: white;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #skills li:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  #skills li img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Contact Section */
+  #contact {
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+  
+  #contact p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  /* Footer */
+  footer {
+    background: linear-gradient(to right, #4cc9f0, #4361ee);
+    color: white;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Animations */
+  #projects li:hover,
+  #skills li:hover {
+    animation: pulse 1s ease-out;
+  }
+
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
     }
-  
-    section ul li img {
-      margin: 0 0 10px 0;
-    }
-  
-    section ul li a {
-      font-size: 1.2rem;
+    50% {
+      transform: scale(1.05);
     }
   }
-  nav ul li a:focus {
-    outline: 2px dashed gold;
-    outline-offset: 2px;
-  }
 
-  /* General Styling */
-button#theme-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-
-button#theme-toggle:hover {
-  opacity: 0.8;
-}
-
-svg {
-  transition: all 0.3s ease;
-  width: 24px;
-  height: 24px;
-}
-
-/* Dark Mode */
-.dark-mode{
-  background-color: #333;
-  color: #fff;
-}
+  /* dark mode! */
+  /* Dark Mode Styles */
 body.dark-mode {
-  background-color: #333;
-  color: #fff;
-}
-
-body.dark-mode button#theme-toggle svg {
-  stroke: #ffd700; /* Yellow for sun in dark mode */
-}
-
-
+    background: #121212;
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode header {
+    background: linear-gradient(to right, #1e3a8a, #1d4ed8);
+  }
+  
+  body.dark-mode nav {
+    background: rgba(30, 30, 30, 0.8);
+  }
+  
+  body.dark-mode a {
+    color: #4cc9f0;
+  }
+  
+  body.dark-mode a:hover {
+    color: #ffcc00;
+  }
+  
+  body.dark-mode #projects li {
+    background: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  body.dark-mode footer {
+    background: linear-gradient(to right, #1d4ed8, #1e3a8a);
+  }
+  
+  
